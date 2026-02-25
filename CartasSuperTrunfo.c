@@ -1,9 +1,8 @@
 #include <stdio.h>
 
 // Desafio Super Trunfo - Países
-// Tema 1 - Cadastro das cartas
-// Nível Novato
-// Objetivo: Ler e exibir os dados de duas cartas utilizando apenas scanf e printf.
+// Nível Aventureiro
+// Agora o programa calcula Densidade Populacional e PIB per Capita
 
 int main() {
 
@@ -19,6 +18,8 @@ int main() {
     float area1;
     float pib1;
     int pontosTuristicos1;
+    float densidade1;
+    float pibPerCapita1;
 
     // Carta 2
     char estado2;
@@ -28,6 +29,8 @@ int main() {
     float area2;
     float pib2;
     int pontosTuristicos2;
+    float densidade2;
+    float pibPerCapita2;
 
     // ============================
     // ENTRADA DE DADOS - CARTA 1
@@ -86,6 +89,17 @@ int main() {
 
 
     // ============================
+    // CÁLCULOS
+    // ============================
+
+    densidade1 = populacao1 / area1;
+    pibPerCapita1 = pib1 / populacao1;
+
+    densidade2 = populacao2 / area2;
+    pibPerCapita2 = pib2 / populacao2;
+
+
+    // ============================
     // EXIBIÇÃO DOS DADOS
     // ============================
 
@@ -100,6 +114,8 @@ int main() {
     printf("Area: %.2f km2\n", area1);
     printf("PIB: %.2f bilhoes de reais\n", pib1);
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos1);
+    printf("Densidade Populacional: %.2f hab/km2\n", densidade1);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita1);
 
     // Carta 2
     printf("\nCarta 2:\n");
@@ -110,6 +126,8 @@ int main() {
     printf("Area: %.2f km2\n", area2);
     printf("PIB: %.2f bilhoes de reais\n", pib2);
     printf("Numero de Pontos Turisticos: %d\n", pontosTuristicos2);
+    printf("Densidade Populacional: %.2f hab/km2\n", densidade2);
+    printf("PIB per Capita: %.2f reais\n", pibPerCapita2);
 
     return 0;
 }
